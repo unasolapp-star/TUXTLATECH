@@ -1,5 +1,11 @@
 <?php
 
+// Forzar la visualización de errores para depurar el HTTP 500
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+// Prevenir que fallos de MySQL rompan la app con una excepción fatal en PHP 8+
+mysqli_report(MYSQLI_REPORT_OFF);
+
 /* 1. CREDENCIALES DE BASE DE DATOS */
 
 // Define la dirección del servidor o host donde se aloja el sistema gestor de base de datos
