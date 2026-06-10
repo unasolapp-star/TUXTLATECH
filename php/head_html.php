@@ -17,14 +17,14 @@ echo "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">";
 echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
 
 // Importa la hoja de estilos principal del framework Bootstrap 3 desde su red de entrega de contenidos (CDN)
-echo "<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">";
+echo "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">";
 // Importa la librería jQuery necesaria para el funcionamiento de los componentes interactivos de Bootstrap
 echo "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>";
 // Importa el archivo de comportamientos interactivos (JavaScript) de Bootstrap 3
-echo "<script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js\"></script>";
+echo "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js\"></script>";
 
 // Integra la biblioteca de íconos vectoriales FontAwesome versión 4 para añadir gráficos a la interfaz
-echo "<link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">";
+echo "<link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">";
 
 // Incorpora la librería SweetAlert2 mediante CDN para generar ventanas de alerta dinámicas y modernas
 echo "<script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>";
