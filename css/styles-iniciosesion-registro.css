@@ -1,0 +1,114 @@
+/* Selector base para la etiqueta html que define dimensiones */
+html{
+    /* Asigna todo el ancho de la ventana al documento */
+    width: 100%;
+    /* Asigna toda la altura de la ventana al documento */
+    height: 100%;
+}
+/* Selector para la clase de contenedor que estructura el centro de registro e inicio de sesión */
+.container{
+    /* Aleja la caja 60 píxeles de la parte superior */
+    margin-top: 60px;
+    /* Limita el ancho horizontal a un 70% del total de la pantalla */
+    width: 70%;
+    /* Limita la altura vertical a un 90% del total de la pantalla */
+    height: 90%;
+    /* Ubica un fondo fotográfico a todo el bloque */
+    background-image: url("./../img/fondo.jpg");
+    /* Forza la resolución del fondo para expandirse y llenar cada resquicio */
+    background-size: cover;
+    /* Implementa la variable blanca para cualquier texto carente de atributo específico */
+    color: var(--blanco);
+    /* Utiliza display flexible para el acomodo interno */
+    display: flex;
+    /* Realiza una alineación vertical centralizada */
+    align-items: center;
+}
+/* Selector de la clase para el componente principal de barra de navegación */
+.navbar{
+    /* Da formato al color de superficie utilizando la variable global de color oscuro */
+    background-color: var(--negro);
+}
+/* Selector asociado a la caja contenedora de los datos de captura del usuario */
+.form{
+    /* Aprovecha la totalidad de la envoltura asignada por el componente padre */
+    width: 100%;
+    /* Habilita capacidades flexibles de organización */
+    display: flex;
+    /* Sitúa y centra los subelementos en el eje horizontal */
+    justify-content: center;
+    /* Previene deformaciones forzando desborde al renglón de abajo cuando no caben de lado a lado */
+    flex-wrap: wrap;
+    /* Fija el color de la fuente base al mismo asignado en variables como tono claro */
+    color: var(--blanco);
+}
+
+/* Selector genérico de botón para modificar el comportamiento estructural que viene por defecto */
+.boton{
+    /* Permite centrar un botón interno de un modo independiente */
+    display: flex;
+    justify-content: center;
+}
+/* Selector dedicado a encapsular con efectos el recuadro principal oscuro central */
+.centrar{
+    /* Ocupa el 100% disponible de lado a lado */
+    width: 100%;
+    /* Aporta 2 unidades de respiro arriba y abajo dentro de su propio límite perimetral */
+    padding: 2rem 0;
+    /* Traza una delgada y sutil línea blanca de límite alrededor */
+    border: var(--blanco) solid 1px;
+    /* Da un grado de 20 píxeles de curvatura en las esquinas */
+    border-radius: 20px;
+    /* Pinta de color oscuro estandarizado el trasfondo del rectángulo principal */
+    background-color: var(--negro);
+}
+/* Selector de componente con clase de compra/acción que asocia colores para fondos oscuros */
+.comprar {
+    background-color: #272727;
+    color: var(--blanco);
+}
+
+/* Modifica dinámicamente el estilo al posar el elemento indicador sobre la interfaz botonera */
+.comprar:hover {
+    background-color: rgb(212, 212, 212);
+    color: var(--negro);
+}
+/* Selector de la clase para enlaces orientados a redirigir al registro si no se dispone de cuenta */
+.no-registrado{
+    /* Fija los atributos de márgenes superiores en 2 rem, cero en los costados y 1 rem por debajo */
+    margin: 2rem 0 1rem 0;
+}
+
+/* Selector que regula las subdivisiones o cajas de entrada que el cliente ve para cada texto */
+.form-group{
+    /* Hace que la barra de texto se extienda sólo hasta un 90% para dar simetría respecto a los lados */
+    width: 90%;
+    /* Descarta los empujes exteriores */
+    margin: 0;
+}
+
+/* Selector específico para los rótulos descriptivos de fallos o invalidaciones devueltos mediante el GET de error */
+.error{
+    /* Destaca las notificaciones pintándolas en tono rojo sólido */
+    color: red;
+}
+
+/* Reglas de resolución orientadas a adaptar progresivamente y hacer ceder el contenedor en pantallas minúsculas */
+@media(max-width: 1000px){
+    /* Ensancha un 10% adicional el div padre si se comprime a los mil pixeles */
+    .container{
+        width: 80%;
+    }
+}
+@media(max-width: 800px){
+    /* Ensancha a un 85% para pantallas más angostas, evitando ahogar el formulario */
+    .container{
+        width: 85%;
+    }
+}
+@media(max-width: 600px){
+    /* Asigna prácticamente el ancho completo salvando pocos bordes para dispositivos pequeños o uso vertical */
+    .container{
+        width: 90%;
+    }
+}

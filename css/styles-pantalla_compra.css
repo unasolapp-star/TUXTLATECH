@@ -1,0 +1,145 @@
+/* Selector que manipula el nodo raíz html para la vista del módulo actual */
+html{
+    /* Abarca la anchura integra de la visualización */
+    width: 100%;
+    /* Abarca la altura integra de la visualización */
+    height: 100%;
+    /* Importa una fotografía como fondo desde su origen de imágenes base */
+    background-image: url("../img/fondo.jpg");
+    /* Realiza una cobertura simétrica y extendida del gráfico sobre el área visible */
+    background-size: cover;
+}
+/* Selector de la clase genérica para la recolección de los contenedores a formatear y espaciar */
+.container{
+    /* Distancia la caja a cincuenta píxeles desde el inicio en el top */
+    margin-top: 50px;
+    /* Define 0 al top, 3 rem para laterales y 2 rem a la base en valores internos */
+    padding: 0 3rem 2rem 3rem;
+}
+
+/* Selector empleado para componentes orientados al click de confirmación o negación */
+.boton {
+    /* Atribuye un pigmento opaco al background */
+    background-color: #272727;
+    /* Atribuye la gama predeterminada blanqueada para textos internos de la caja */
+    color: var(--blanco);
+}
+
+/* Propiedades para la clase botón bajo efecto cursor en sobrevuelo (hovering state) */
+.boton:hover {
+    /* Desliza el tono visual a gris para confirmar interactividad disponible al usuario */
+    background-color: rgb(212, 212, 212);
+    /* Desliza el tono visual interno del texto a oscuro en contraste al background gris */
+    color: var(--negro);
+}
+/* Regla global específica hacia recursos de origen de imagen del HTML */
+img{
+    /* Regula cualquier miniatura visualizada en pantalla a una altura estática de 120 unidades de pixel */
+    height: 120px;
+}
+/* Selector clase info-producto asignado para estructurar ficha unitaria de artículo */
+.info-producto{
+    /* Introduce un respiro inicial vertical desde la parte superior de los bordes con cinco píxeles */
+    padding-top: 5px;
+    /* Acude a la visualización flexible posibilitando manejo en un eje dinámico */
+    display: flex;
+    /* Pauta a la orientación de flexibilidad para trazar renglón a renglón */
+    flex-direction: row;
+    /* Pauta distribuir espacio al inicio, entre medios, y final separando las partes */
+    justify-content: space-around;
+}
+/* Selector sobre jerarquías tipográficas mayores para dictar un patrón constante de posicionado */
+h1, h4{
+    /* Traslada la alineación de estos niveles de h1 y h4 unificada hacia la parte central estricta */
+    text-align: center;
+}
+/* Selector customizado para textos cuya alineación precisa una regla de display combinada (inline-block) */
+.centrar-texto{
+    /* Fuerza al componente a conservar propiedades de un bloque pero con adaptabilidad de anchura inherente a su tipo en línea */
+    display: inline-block;
+    /* Fuerza que automáticamente todo hueco izquierdo y derecho igualen su longitud centralizando la caja */
+    margin: 0 auto;
+    /* Complementa y ratifica la centralización de los párrafos interiores de la misma */
+    text-align: center;
+}
+/* Selector enfocado a restringir áreas reducidas por exceso resolutivo */
+.ancho-minimo{
+    /* Dictamina un margen o cuota horizontal inamovible de medio millar de pixeles */
+    width: 500px;
+}
+/* Selector asignable en bloques contiguos que necesitan estar espaciados a nivel contenedor sin flotación rígida */
+.centrar-botones{
+    /* Activa propiedad para la disposición interna por flexión */
+    display: flex;
+    /* Determina que los subelementos deban ubicarse de corrido en la misma fila horizontal */
+    flex-direction: row;
+    /* Dispone como orden un espacio fijo entre uno y otro equivalente a dos distancias relativas de origen */
+    gap: 2rem;
+    /* Fuerza una confluencia al medio para centrar agrupaciones de dos o más elementos de click */
+    justify-content: center;
+}
+/* Selector en etiqueta natural dedicada para marcar distinciones entre distintas piezas html */
+hr{
+    /* Desliza en 5 píxeles el inicio o remanente exterior superior de las barras (divisores) formados por hr */
+    margin-top: 5px;
+}
+
+/* Media queries destinadas a resoluciones en transición colapsando navegaciones superiores al igual que en módulos compartidos */
+@media (max-width:1146px) {
+
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

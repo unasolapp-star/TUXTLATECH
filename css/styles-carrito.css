@@ -1,0 +1,121 @@
+/* Variables de colores globales para la paleta UI */
+:root {
+    --negro: #1f1f1f;
+    --blanco: rgb(230, 230, 230);
+}
+/* Configuración de una imagen de fondo inamovible (parallax-like effect) */
+html{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+/* Botón genérico gris oscuro con letras claras */
+.boton {
+    background-color: #272727;
+    color: var(--blanco);
+    margin: 15px 6px 0 6px;
+}
+
+.boton:hover {
+    background-color: rgb(212, 212, 212);
+    color: var(--negro);
+}
+/* Margen superior para evitar superposición con el navbar fijo */
+.container{
+    margin-top: 50px;
+}
+/* Define la altura de las imágenes miniatura de los productos en el carrito */
+img.imagen{
+    height: 150px;
+}
+/* Posiciona y centra el texto a la altura de la imagen en cada renglón */
+.texto-informativo{
+    display: flex;
+    align-items: center;
+}
+/* Estilo centrado para el encabezado de "Carrito de compras" */
+h1.h1{
+    text-align: center;
+    margin: 2rem auto;
+}
+/* Borra el margen de la tabla principal para alinear los botones inferiores correctamente */
+.table{
+    margin: 0;
+}
+/* Acomoda el botón de pago / acciones hacia la derecha en la parte inferior */
+.posiciona-botones{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+/* Clase de anulación (override) para mantener el fondo transparente al pasar el mouse */
+.no-hover{
+    background-color: transparent !important;
+}
+@media (max-width:1146px) {
+
+    /* Punto de quiebre del menú */
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* Fin del punto de quiebre del menú */
+
+}

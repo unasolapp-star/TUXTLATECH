@@ -1,0 +1,159 @@
+/* Selector de la raíz del documento para definir variables de color */
+:root {
+    /* Define el color base oscuro */
+    --negro: #1f1f1f;
+    /* Define el color base claro */
+    --blanco: rgb(230, 230, 230);
+}
+
+/* Selector de la etiqueta html para configurar el fondo de la página */
+html {
+    /* Establece el ancho al 100% de la ventana */
+    width: 100%;
+    /* Establece la altura al 100% de la ventana */
+    height: 100%;
+    /* Asigna una imagen de fondo desde el directorio correspondiente */
+    background-image: url("../img/fondo.jpg");
+    /* Centra la imagen de fondo tanto vertical como horizontalmente */
+    background-position: center center;
+    /* Evita que la imagen de fondo se repita */
+    background-repeat: no-repeat;
+    /* Escala la imagen para cubrir todo el contenedor */
+    background-size: cover;
+    /* Fija la imagen de fondo para que no se desplace con el contenido */
+    background-attachment: fixed;
+}
+
+/* Selector de la clase boton para definir la apariencia de los elementos interactivos */
+.boton {
+    /* Asigna un color de fondo gris oscuro */
+    background-color: #272727;
+    /* Asigna el color del texto utilizando la variable global clara */
+    color: var(--blanco);
+    /* Añade un margen superior de 8 píxeles */
+    margin-top: 8px;
+}
+
+/* Selector para el estado de interacción (hover) del botón */
+.boton:hover {
+    /* Cambia el color de fondo a un gris más claro al pasar el cursor */
+    background-color: rgb(212, 212, 212);
+    /* Cambia el color del texto utilizando la variable global oscura */
+    color: var(--negro);
+}
+
+/* Selector de la clase container para agrupar y posicionar el contenido central */
+.container {
+    /* Añade un margen superior de 50 píxeles */
+    margin-top: 50px;
+    /* Añade un relleno inferior de 2 unidades relativas */
+    padding-bottom: 2rem;
+    /* Ajusta la altura al contenido mínimo necesario */
+    height: min-content;
+    /* Configura el relleno interno: 0 superior, 4rem derecha, 3rem inferior, 4rem izquierda */
+    padding: 0 4rem 3rem 4rem;
+}
+
+/* Selector de la clase navbar-text para aplicar márgenes a los textos de navegación */
+.navbar-text {
+    /* Establece un margen uniforme de 15 píxeles */
+    margin: 15px;
+}
+
+/* Selector de la etiqueta textarea para restringir su comportamiento */
+textarea {
+    /* Impide que el usuario redimensione el área de texto */
+    resize: none;
+}
+
+/* Selector de la clase form-group para aplicar separación entre campos de formulario */
+.form-group{
+    /* Añade un margen inferior de 5 píxeles */
+    margin-bottom: 5px;
+}
+
+/* Regla de medios para adaptar el diseño en pantallas con ancho máximo de 1150 píxeles */
+@media(max-width: 1150px) {
+    /* Selector para la cabecera de la barra de navegación */
+    .navbar-header {
+        /* Elimina la flotación del elemento */
+        float: none;
+    }
+
+    /* Selectores para las secciones izquierda y derecha de la barra de navegación */
+    .navbar-left,
+    .navbar-right {
+        /* Fuerza la eliminación de la flotación */
+        float: none !important;
+    }
+
+    /* Selector para el botón de colapso de la navegación */
+    .navbar-toggle {
+        /* Muestra el botón como un elemento de bloque */
+        display: block;
+    }
+
+    /* Selector para el contenedor de los enlaces de navegación */
+    .navbar-collapse {
+        /* Aplica un borde superior transparente de 1 píxel */
+        border-top: 1px solid transparent;
+        /* Añade una sombra interna superior sutil */
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    /* Selector para la barra de navegación fijada en la parte superior */
+    .navbar-fixed-top {
+        /* Asegura que se posicione en la parte superior absoluta */
+        top: 0;
+        /* Configura el ancho del borde, mostrando solo el inferior */
+        border-width: 0 0 1px;
+    }
+
+    /* Selector para forzar el ocultamiento de la navegación colapsada por defecto */
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    /* Selector para la lista de navegación principal */
+    .navbar-nav {
+        float: none !important;
+        /* Añade un margen superior de 7.5 píxeles */
+        margin-top: 7.5px;
+    }
+
+    /* Selector para los elementos de la lista de navegación principal */
+    .navbar-nav>li {
+        float: none;
+    }
+
+    /* Selector para los enlaces dentro de los elementos de la lista */
+    .navbar-nav>li>a {
+        /* Define un relleno superior de 10 píxeles */
+        padding-top: 10px;
+        /* Define un relleno inferior de 10 píxeles */
+        padding-bottom: 10px;
+    }
+
+    /* Selector para forzar la visualización de los elementos colapsados cuando están activos */
+    .collapse.in {
+        display: block !important;
+    }
+
+    /* Selector para el menú desplegable abierto dentro de la navegación */
+    .navbar-nav .open .dropdown-menu {
+        /* Cambia el posicionamiento a estático */
+        position: static;
+        float: none;
+        /* Permite que el ancho se ajuste automáticamente */
+        width: auto;
+        margin-top: 0;
+        /* Elimina el color de fondo */
+        background-color: transparent;
+        /* Elimina los bordes */
+        border: 0;
+        /* Elimina las sombras en navegadores webkit */
+        -webkit-box-shadow: none;
+        /* Elimina las sombras en estándar */
+        box-shadow: none;
+    }
+}

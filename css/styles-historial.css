@@ -1,0 +1,109 @@
+/* Imagen de fondo inamovible (fija) cubriendo toda el área visual */
+html {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+/* Espacios predeterminados para el bloque contenedor principal */
+.container {
+    padding: 60px 3rem 1rem 3rem;
+    height: min-content;
+}
+
+/* Formato del título de inicio de historial de compras */
+h1.h1{
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem auto 0 auto;
+}
+/* Remueve márgenes base del texto de la barra de navegación */
+.navbar-text{
+    margin: 0;
+}
+
+/* Colores y fondo en botón de historial */
+.comprar {
+    background-color: #272727;
+    color: var(--blanco);
+}
+
+/* Cambio de estado hover en el botón */
+.comprar:hover {
+    background-color: rgb(212, 212, 212);
+    color: var(--negro);
+}
+
+/* Altura unificada de la imagen en miniatura */
+img.imagen{
+    height: 150px;
+}
+/* Agranda las etiquetas "bold" dentro de los títulos principales */
+h1 > b{
+    font-size: larger;
+}
+/* Controla los márgenes inferiores de la tabla de Bootstrap */
+.table{
+    margin-bottom: 0;
+}
+/* Desactiva los menús expandidos si la pantalla es menor a 1150px */
+@media(max-width: 1150px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

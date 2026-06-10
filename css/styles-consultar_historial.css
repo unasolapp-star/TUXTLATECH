@@ -1,0 +1,100 @@
+/* Variables globales de colores */
+:root {
+    --negro: #1f1f1f;
+    --blanco: rgb(230, 230, 230);
+}
+/* Estilos de fondo generales para toda la página */
+html{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+/* Estilos básicos del botón personalizado */
+.boton {
+    background-color: #272727;
+    color: var(--blanco);
+    margin: 15px 6px 0 6px;
+}
+
+.boton:hover {
+    background-color: rgb(212, 212, 212);
+    color: var(--negro);
+}
+/* Contenedor principal de la página de historial */
+.container{
+    margin-top: 50px;
+    height: min-content;
+}
+/* Tamaño fijo para las miniaturas en la tabla del historial */
+img.imagen{
+    height: 70px;
+}
+/* Eliminar el margen inferior de la tabla por defecto de Bootstrap */
+.table{
+    margin-bottom: 0;
+}
+/* Ajuste al tamaño de la fuente para las cabeceras y celdas */
+th,td{
+    font-size: small;
+}
+/* Punto de quiebre (breakpoint) para colapsar el menú de navegación superior */
+@media(max-width: 1150px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

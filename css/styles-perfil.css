@@ -1,0 +1,154 @@
+/* Selector de la etiqueta html para configurar el fondo general */
+html {
+    /* Asigna el ancho completo disponible */
+    width: 100%;
+    /* Asigna la altura completa disponible */
+    height: 100%;
+    /* Vincula la imagen de fondo desde el directorio correspondiente */
+    background-image: url("../img/fondo.jpg");
+    /* Deshabilita la repetición de la imagen de fondo */
+    background-repeat: no-repeat;
+    /* Escala la imagen para que cubra la superficie total */
+    background-size: cover;
+}
+
+/* Selector de la clase container para el contenedor principal de datos del perfil */
+.container {
+    /* Adapta la altura de acuerdo al contenido interno mínimo */
+    height: min-content;
+    /* Establece rellenos: 60px arriba, 3rem derecha e izquierda, 3rem abajo */
+    padding: 60px 3rem 3rem 3rem;
+}
+
+/* Selector de la clase navbar-text para elementos de texto dentro del menú */
+.navbar-text{
+    /* Elimina márgenes exteriores */
+    margin: 0;
+}
+
+/* Selector de la clase boton utilizada en las acciones del perfil */
+.boton {
+    /* Define el color de fondo en tono gris muy oscuro */
+    background-color: #272727;
+    /* Usa la variable de color blanco para el texto */
+    color: var(--blanco);
+    /* Añade un pequeño margen superior de 5 píxeles */
+    margin-top: 5px;
+}
+
+/* Selector del estado de cursor sobre los elementos con la clase boton */
+.boton:hover {
+    /* Modifica el color de fondo a un tono más claro */
+    background-color: rgb(212, 212, 212);
+    /* Cambia el color del texto a oscuro a través de la variable correspondiente */
+    color: var(--negro);
+}
+/* Selector de la etiqueta h1 empleada como encabezado principal */
+h1{
+    /* Aumenta el tamaño de la fuente a 4 veces la proporción base */
+    font-size: 4em;
+}
+/* Selector de la etiqueta p para los párrafos de texto */
+p{
+    /* Genera un margen superior de 0.5 unidades relativas */
+    margin-top: .5rem;
+    /* Ajusta el tamaño de la fuente para hacerla grande y legible */
+    font-size: large;
+}
+/* Selector de la etiqueta section que organiza los bloques de datos */
+section{
+    /* Determina que el ancho mínimo sea el necesario para su contenido */
+    min-width: fit-content;
+    /* Define el ancho por defecto al 50% de su contenedor padre */
+    width: 50%;
+}
+/* Selector de la clase padre que actúa como envoltorio general */
+.padre{
+    /* Añade un margen en la parte inferior de 1 unidad relativa */
+    margin-bottom: 1rem;
+    /* Utiliza display flexible para el acomodo de los elementos */
+    display: flex;
+    /* Establece que los elementos se distribuyan en fila */
+    flex-direction: row;
+    /* Permite que los elementos pasen a otra línea si exceden el espacio */
+    flex-wrap: wrap;
+}
+/* Consulta de medios que se aplica cuando el ancho de la pantalla es menor a 1146px */
+@media (max-width:1146px) {
+    /* Redimensiona la fuente de la etiqueta h1 para pantallas medianas o pequeñas */
+    h1{
+        font-size: 3em;
+    }
+    /* Mantiene los párrafos con un tamaño de fuente grande */
+    p{
+        font-size: large;
+    }
+    /* Inicia el bloque de selectores para colapsar la navegación */
+    .navbar-header {
+        /* Elimina cualquier propiedad de flotación */
+        float: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        /* Desactiva la flotación utilizando la directiva important */
+        float: none !important;
+    }
+
+    .navbar-toggle {
+        /* Vuelve visible al botón tipo hamburguesa */
+        display: block;
+    }
+
+    .navbar-collapse {
+        /* Aplica un borde superior invisible de un píxel */
+        border-top: 1px solid transparent;
+        /* Concede un sombreado interno tenue */
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        /* Ancla el elemento al borde superior y deja solo un borde en su parte inferior */
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        /* Fuerza la desaparición inicial del contenido de navegación colapsable */
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        /* Brinda un margen en la parte superior del menú listado */
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        /* Evita la flotación en los ítems de lista individuales */
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        /* Configura los espacios de relleno en los enlaces de la lista de navegación */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        /* Fuerza la visibilidad de los elementos agrupados cuando están abiertos */
+        display: block !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        /* Transforma la posición y anula fondos/bordes en los elementos desplegables */
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

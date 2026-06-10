@@ -1,0 +1,24 @@
+/* Selector de la raíz del documento para definir variables globales */
+:root {
+    /* Define la variable global para el color oscuro en formato hexadecimal */
+    --negro: #1f1f1f;
+    /* Define la variable global para el color claro en formato RGB */
+    --blanco: rgb(230, 230, 230);
+}
+
+/* Selector universal para restablecer los estilos base en todos los elementos */
+* {
+    /* Establece el modelo de caja para incluir el borde y el relleno en el ancho y alto total */
+    box-sizing: border-box;
+    /* Elimina el relleno predeterminado */
+    padding: 0;
+    /* Elimina el margen predeterminado */
+    margin: 0;
+}
+
+/* Selector para ocultar los íconos nativos de revelación y limpieza en campos de contraseña (específico de Edge/IE) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    /* Fuerza la ocultación de los elementos nativos del navegador */
+    display: none !important;
+}

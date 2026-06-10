@@ -1,0 +1,156 @@
+/* Estilo general para la barra de navegación */
+.navbar {
+    background-color: var(--negro);
+}
+
+/* Espaciado superior del cuerpo para compensar la barra fija */
+body {
+    padding-top: 50px;
+}
+
+/* Tarjetas de productos (Product Cards) */
+.card {
+    width: 18rem;
+    border: solid 1px;
+    padding: 1%;
+    border-radius: .5em;
+    margin-bottom: 1.5rem;
+}
+
+/* Imagen destacada dentro de las tarjetas de productos */
+.card-img-top {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+/* Línea separadora sólida en las tarjetas o contenedor */
+hr.solid {
+    border-top: 1px solid #bbb;
+    margin: 0px 0 5px 0;
+}
+
+/* Botón estándar para comprar o añadir al carrito */
+.comprar {
+    background-color: #272727;
+    color: var(--blanco);
+}
+
+/* Comportamiento al pasar el cursor (hover) por encima del botón */
+.comprar:hover {
+    background-color: rgb(212, 212, 212);
+    color: var(--negro);
+}
+
+/* Contenedor flexible principal para distribuir la cuadrícula de productos */
+.principal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin: 0 auto;
+    align-content: flex-start;
+    column-gap: 1rem;
+}
+
+/* Caja para alinear vertical y horizontalmente elementos internos o títulos */
+#altura_caja {
+    height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reseteo de márgenes en textos de navegación y clase auxiliar global */
+.navbar-text, .quitar_margen{
+    margin: 0;
+}
+
+/*                Pie de página                   */
+
+div.footer {
+    height: 7rem;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Enlaces dentro del pie de página */
+div.footer a{
+    font-size: smaller;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* Adaptación responsiva para dispositivos medianos y tablets */
+@media(max-width: 800px) {
+    .principal {
+        width: 95%;
+        justify-content: space-around;
+        column-gap: 0.5rem;
+    }
+    .carrusel h3, .carrusel p{
+        font-size: smaller;
+    }
+}
+/* Punto de quiebre para el colapso del menú de navegación */
+@media(max-width: 1150px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

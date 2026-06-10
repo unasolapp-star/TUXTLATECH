@@ -1,0 +1,103 @@
+/* Variables globales de colores */
+:root {
+    --negro: #1f1f1f;
+    --blanco: rgb(230, 230, 230);
+}
+/* Configuración del fondo a pantalla completa y centrado */
+html{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+/* Estilos para el botón principal de modificar producto */
+.boton {
+    background-color: #272727;
+    color: var(--blanco);
+}
+
+.boton:hover {
+    background-color: rgb(212, 212, 212);
+    color: var(--negro);
+}
+/* Margen y alto del contenedor general */
+.container{
+    margin-top: 50px;
+    height: min-content;
+}
+/* Dimensiones de las imágenes en miniatura en la tabla */
+img.imagen{
+    width: 70px;
+}
+/* Posiciona y centra el contenido principal en una misma fila (flex row) */
+.mismo-nivel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Centrado del texto y el contenido en toda la tabla */
+table th, table td{
+    text-align: center;
+}
+
+/* Punto de quiebre para el menú de navegación (menú tipo hamburguesa) */
+@media(max-width: 1150px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
